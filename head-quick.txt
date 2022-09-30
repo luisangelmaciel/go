@@ -14,9 +14,10 @@
   <meta name="twitter:site" content="@luisangelmaciel" />
   <meta name="twitter:creator" content="@luisangelmaciel">
   <meta name="twitter:image" content="https://luisangelmaciel.github.io/img/twitterimage.png" />
-  
-  <title></title>
   <meta property="og:title" content="xbr.pw">
+
+  <title>NNNNNNNNN</title>
+
   <meta name="twitter:title" content="NNNNNNNNN">
   <meta name="description" content="XXXXXXXXXX">
   <meta name='twitter:description ' content=' XXXXXXXXXX '>
