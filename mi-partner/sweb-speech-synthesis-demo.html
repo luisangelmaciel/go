@@ -11,26 +11,19 @@
   
   html {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 100%;
-	background: #333;
   }
   
   #page-wrapper {
-	width: 640px;
-	background: #FFFFFF;
+
+
 	padding: 1em;
-	margin: 1em auto;
-	border-top: 5px solid #69c773;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+
   }
   
-  h1 {
-	margin-top: 0;
-  }
+
   
   #msg {
 	font-size: 0.9em;
-	line-height: 1.4em;
   }
   
   #msg.not-supported strong {
@@ -42,7 +35,7 @@
 	padding: 0.5em;
 	font-size: 1.2em;
 	border-radius: 3px;
-	border: 1px solid #D9D9D9;
+	border: px solid #D9D9D9;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.1) inset;
   }
   
@@ -90,29 +83,29 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="page-wrapper">
-  <h1>Web Speech Synthesis Demo</h1>
+
   
-  <p id="msg"></p>
+  <p id="msg" style="display: none;"></p>
 
   <input type="text" name="speech-msg" id="speech-msg" x-webkit-speech>
 
-	<div class="option">
+	<div class="option" style="display: none;">
 		<label for="voice">Voice</label>
 		<select name="voice" id="voice"></select>
 	</div>
-	<div class="option">
+	<div class="option" style="display: none;">
 		<label for="volume">Volume</label>
 		<input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="1">
 	</div>
-	<div class="option">
+	<div class="option" style="display: none;">
 		<label for="rate">Rate</label>
 		<input type="range" min="0.1" max="10" step="0.1" name="rate" id="rate" value="1.8">
 	</div>
-	<div class="option">
+	<div class="option" style="display: none;">
 		<label for="pitch">Pitch</label>
 		<input type="range" min="0" max="2" step="0.1" name="pitch" id="pitch" value="1.4">
 	</div>
-
+    <br><br>
 	<button id="speak">Speak</button>
 
 </div>
