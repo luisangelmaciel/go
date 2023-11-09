@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Landscape Mode and High Resolution</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lato:wght@400;900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+  <title>Landscape Mode and High Resolution</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lato:wght@400;900&amp;display=swap'>
+  <style>body {
+    text-align: center;
+    margin: 50px;
+    font-family: 'Lato';
+  }
+  
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: green;
+    font-weight: 900;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }</style>
 
 </head>
 <body>
@@ -11,7 +33,19 @@
 <h1>Resolution Check</h1>
 <p>Please rotate the device.</p>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script>let myMediaQuery = window.matchMedia('(min-resolution: 200dpi) and (min-aspect-ratio: 16/9)');
+
+    function matchMediaCallback(myMediaQuery) {
+      if(myMediaQuery.matches) {
+        document.querySelector("p").textContent = "Loading game resources..";
+      } else {
+        document.querySelector("p").textContent = "Please rotate your device";
+      }
+    }
+    
+    myMediaQuery.addEventListener('change', matchMediaCallback);
+    
+    matchMediaCallback(myMediaQuery);</script>
 
 </body>
 </html>

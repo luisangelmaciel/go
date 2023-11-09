@@ -14,9 +14,10 @@
   width: 100%;
   height: 65px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  background: inherit;
   display: flex;
   overflow-x: auto;
+  z-index: 80;
 }
 
 .navbtn__link {
@@ -30,18 +31,19 @@
   white-space: nowrap;
   font-family: sans-serif;
   font-size: 13px;
-  color: #444444;
+  color: inherit; opacity: 0.8;
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: background-color 0.1s ease-in-out;
+  /*-webkit-tap-highlight-color: transparent;*/
+  background-color: inherit;
+  transition: 0.1s ease-in-out;
 }
 
 .navbtn__link:hover {
-  background-color: #eeeeee;
+   opacity: 0.5;
 }
 
 .navbtn__link--active {
-  color: #009578;
+  color: inherit; opacity: 1;
 }
 
 .navbtn__icon {
@@ -597,19 +599,24 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #8d8d8d;
-  background: #fff;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   margin: 0 0 65px 0;
 }
 
+
+
+
+body, .space {color: black; background-color:  white;}
+body, .space {color: white; background-color:  black;}
+
 .a {
-  color: #8d8d8d;
+  color: inherit;
+  background: inherit;
   text-decoration: none;
 }
 .a:hover {
-  color: #232323;
+  color: inherit;
 }
 
 .navtop {
@@ -620,14 +627,14 @@ body {
 .navtop-ul {
   line-height: 2.2;
   display: flex;
+  background-color: inherit;
   justify-content: flex-start;
 }
 .navtop-ul-li {
   margin: 0.325rem 0;
 }
 
-#logo {
-  color: #232323;
+#logo {  
   font-weight: 700;
   font-size: 1.125rem;
 }
@@ -658,13 +665,14 @@ img {
   display: inline-block;
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.1;
-  text-decoration: underline;
-  color: #e83f43;
+  line-height: 1.1;  
+  color: inherit; opacity: 0.8; 
 }
 .intro .title .underline {
-  color: #232323;
+   color: inherit;
 }
+
+
 
 .description {
   position: relative;
@@ -699,7 +707,7 @@ img {
   text-decoration: none;
   /*background: transparent;*/
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #eeeeee;
+  background-color: transparent;
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -731,7 +739,7 @@ img {
   height: 1px;
   /*background-color: currentColor;*/
   /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);*/
-  background-color: #ffffff;
+  background-color: inherit;
 }
 .controls .icon.arrow-left::before {
   content: "";
@@ -739,7 +747,7 @@ img {
   left: 1px;
   top: -4px;
   width: 9px;
-  height: 9px;color: #444444;
+  height: 9px;color: inherit;
   border-top: solid 01px currentColor;
   border-right: solid 1px currentColor;
   transform: rotate(-135deg);
@@ -750,7 +758,7 @@ img {
   right: 1px;
   top: -4px;
   width: 9px;
-  height: 9px;color: #444444;
+  height: 9px;color: inherit;
   border-top: solid 1px currentColor;
   border-right: solid 1px currentColor;
   transform: rotate(45deg);
@@ -761,8 +769,9 @@ img {
   align-content: center;
   justify-content: center;
   flex-basis: 15%;
-  font-size: 2rem;
-  color: #232323;
+  font-size: 4rem;
+  color: inherit;
+  font-weight: 900;
 }
 .previous:hover .icon, .next:hover .icon {
   transform: scale(1.5);
@@ -836,9 +845,10 @@ img {
   width: 100%;
   left: 0;
   padding: 1rem;
-  background: #fff;
   text-align: center;
 }
+
+
 .flex-nav ul.active {
   display: flex;
 }
@@ -862,7 +872,14 @@ img {
   .intro .title {
     font-size: 4.25rem;
     padding: 2.5rem 2.5rem 3rem 2.5rem;
-    background: #fff;
+    background: #e83f43; opacity: 1;
+  }
+
+  .title {
+    font-size: 4.25rem;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    color: inherit; opacity: 0;
+    z-index: 99;
   }
 
   img {
@@ -915,6 +932,16 @@ img {
     margin: 0;
   }
 }
+
+@media (max-width:600px) {
+  .flex-nav ul {color: inherit; background-color:  #e83f43;}
+  .nav-ul-li {color: inherit; background-color:  inherit;}
+    .a {color: inherit; background-color:  inherit;}
+
+  .w3-modal {padding-top: 30px}
+  .w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content {position: relative}.w3-hide-small {display: none!important}.w3-mobile {display: block;width: 100%!important}.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile {text-align: center}.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button {width: 100%}}
+
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -929,7 +956,7 @@ img {
 <body>
 <!-- partial:index.partial.html -->
 <div class="navtop nav">
-<nav class="flex-nav  ">
+<nav class="flex-nav space ">
   <div class="container">
     <div class="grid">
       <div class="column-xs-9 column-md-8">
@@ -937,8 +964,8 @@ img {
       </div>
       <div class="column-xs-3 column-md-4">
         <a href="#" class="toggle-nav a">Menu <i class="ion-navicon-round"></i></a>
-        <ul class="navtop-ul ul nav-ul">
-          <li class="navtop-ul-li nav-ul-li"><a href="#" class="a">About</a></li>
+        <ul class="navtop-ul ul nav-ul space">
+          <li class="navtop-ul-li nav-ul-li"><a href="#" class="a ">About</a></li>
           <li class="navtop-ul-li nav-ul-li"><a href="#" class="a">Discover</a></li>
           <li class="navtop-ul-li nav-ul-li"><a href="#" class="a">Plan Your Trip</a></li>
         </ul>
@@ -963,7 +990,7 @@ img {
               </div>
               <div class="column-xs-12 column-md-10">
                 <div class="image-holder">
-                  <img src="https://source.unsplash.com/cddaZDt6uRw">
+                  <img src="hawaii-water small.jpeg">
                 </div>
                 <div class="grid">
                   <div class="column-xs-12 column-md-9">
@@ -989,7 +1016,7 @@ img {
               </div>
               <div class="column-xs-12 column-md-10">
                 <div class="image-holder">
-                  <img src="https://source.unsplash.com/Pz3EHf-KJfc">
+                  <img src="hawaii-water small.jpeg">
                 </div>
                 <div class="grid">
                   <div class="column-xs-12 column-md-9">
@@ -1015,7 +1042,7 @@ img {
               </div>
               <div class="column-xs-12 column-md-10">
                 <div class="image-holder">
-                  <img src="https://source.unsplash.com/peYW3VwICpE">
+                  <img src="hawaii-water small.jpeg">
                 </div>
                 <div class="grid">
                   <div class="column-xs-12 column-md-9">
@@ -1024,7 +1051,7 @@ img {
                         <h1 class="title"><span class="underline">Explore Osaka</span></h1>
                       </a>
                     </div>
-                    <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
+                    <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>                  
                   </div>
                 </div>
               </div>
@@ -1041,7 +1068,7 @@ img {
               </div>
               <div class="column-xs-12 column-md-10">
                 <div class="image-holder">
-                  <img src="https://source.unsplash.com/VmeOZQjTVGE">
+                  <img src="hawaii-water small.jpeg">
                 </div>
                 <div class="grid">
                   <div class="column-xs-12 column-md-9">
